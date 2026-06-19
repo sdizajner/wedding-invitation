@@ -37,6 +37,7 @@ const isPreloaderShown = sessionStorage.getItem(sessionKey);
               preloader.classList.add('is-hidden');
               preloader.style.display = 'none';
               document.body.style.overflow = '';
+              document.body.classList.add('preloader-done');
               resolve();
             },
           })
@@ -48,6 +49,7 @@ const isPreloaderShown = sessionStorage.getItem(sessionKey);
         preloader.classList.add('is-hidden');
         preloader.style.display = 'none';
         document.body.style.overflow = '';
+        document.body.classList.add('preloader-done');
         return Promise.resolve();
       }
     }
@@ -68,6 +70,7 @@ const isPreloaderShown = sessionStorage.getItem(sessionKey);
       preloader.classList.add('is-hidden');
       preloader.style.display = 'none';
       document.body.style.overflow = '';
+      document.body.classList.add('preloader-done');
     }
 
     // If reduced motion, skip animation

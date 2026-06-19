@@ -27,6 +27,22 @@ body {
   letter-spacing: 0.005em;
 }
 
+/* Skrivamo sadržaj dok se preloader prikazuje */
+body:not(.preloader-done) .site-header,
+body:not(.preloader-done) .edition-rail,
+body:not(.preloader-done) main,
+body:not(.preloader-done) .site-footer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-header,
+.edition-rail,
+main,
+.site-footer {
+  transition: opacity 0.4s ease-out;
+}
+
 img { max-width: 100%; display: block; }
 button { font: inherit; cursor: pointer; }
 input, select, textarea { font: inherit; color: inherit; }
